@@ -1,0 +1,9 @@
+version: "3"
+services:
+  python:
+    image: python:3.9
+    volumes:
+      - ./src/:/src
+    working_dir: /src
+    command: bash -c 'pip install -r requirements.txt && bash'
+    tty: true
